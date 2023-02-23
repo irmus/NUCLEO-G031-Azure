@@ -8,6 +8,17 @@ Thread를 만들기 위해서는 아래와 같은 작업 필요
 1. ```tx_thread_create()```를 호출해 새로운 thread instance를 생성한다.
 1. thread body 함수 작성
 
+## 주요 API
+
+```
+UINT       tx_thread_create(TX_THREAD *thread_ptr,
+              CHAR *name_ptr,
+              VOID (*entry_function)(ULONG), ULONG entry_input,
+              VOID *stack_start, ULONG stack_size,
+              UINT priority, UINT preempt_threshold,
+              ULONG time_slice, UINT auto_start);
+```
+
 ## 주요 파일
 
 * [Core/Src/app_thread.c](Core/Src/app_threadx.c)
