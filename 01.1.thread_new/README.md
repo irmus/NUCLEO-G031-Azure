@@ -15,8 +15,13 @@ Thread를 만들기 위해서는 아래와 같은 작업 필요
   * STM32CubeMx에서 생성된 파일
 * [app/blinky.c](app/blinky.c)
   * Thread body
+  * 500 ms delay를 통해 1초 주기의 LED 점멸을 구현한다.
 * [app/blinky.h](app/blinky.h)
   * Header for thread body
+
+## 참조 파일
+* [Middlewares/ST/threadx/common/src/txe_thread_create.c](Middlewares/ST/threadx/common/src/txe_thread_create.c)
+  * tx_thread_create() 구현
 
 ## 실행 결과
 Nucleo 보드에 실장된 녹색 LED가 1초 주기로 점멸한다.
